@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Lugemispäike",
+      "hasCanvas": false,
+      "bodyTextLen": 113,
+      "bodyTextHash": "552750397f9f028a8dee71072504c6d12173ff73d1ab43b66fffb19572a5669f",
+      "bodyTextPrefix": "Lugemispäike Lühike lugemisharjutus teie lapsele. Suur kiri, vär",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/prod-persist.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Lugemispäike",
+      "hasCanvas": false,
+      "bodyTextLen": 113,
+      "bodyTextHash": "552750397f9f028a8dee71072504c6d12173ff73d1ab43b66fffb19572a5669f",
+      "bodyTextPrefix": "Lugemispäike Lühike lugemisharjutus teie lapsele. Suur kiri, vär",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/prod-persist-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/prod-persist.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

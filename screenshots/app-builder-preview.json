@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Lugemispäike",
+      "hasCanvas": false,
+      "bodyTextLen": 12,
+      "bodyTextHash": "6c902292a70b64c121414f22b78433d43ee0d5516ff22e57f7d557226a2c08f4",
+      "bodyTextPrefix": "Lugemispäike",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Lugemispäike",
+      "hasCanvas": false,
+      "bodyTextLen": 113,
+      "bodyTextHash": "552750397f9f028a8dee71072504c6d12173ff73d1ab43b66fffb19572a5669f",
+      "bodyTextPrefix": "Lugemispäike Lühike lugemisharjutus teie lapsele. Suur kiri, vär",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

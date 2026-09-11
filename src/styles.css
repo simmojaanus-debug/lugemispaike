@@ -1,0 +1,112 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Lexend", ui-sans-serif, system-ui, sans-serif;
+
+  --color-paper: #f3eee3;
+  --color-paper-2: #ebe4d4;
+  --color-sheet: #fbf8f1;
+  --color-ink: #2a2418;
+  --color-ink-soft: #5c5346;
+  --color-clay: #c45c26;
+  --color-clay-deep: #a3491c;
+  --color-sage: #4f7a5a;
+  --color-sage-deep: #3d6248;
+  --color-line: #d9d0c0;
+  --color-on-accent: #fbf8f1;
+  --color-lemon: #f4edc4;
+  --color-sky: #dce8f2;
+  --color-mint: #dcebdd;
+  --color-sky-ink: #1e2a38;
+  --color-mint-ink: #1e2a22;
+  --color-choice-a: #c45c26;
+  --color-choice-b: #4f7a5a;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  --shadow-border:
+    0px 0px 0px 1px rgb(42 36 24 / 0.06),
+    0px 1px 2px -1px rgb(42 36 24 / 0.06),
+    0px 2px 8px 0px rgb(42 36 24 / 0.05);
+  --shadow-border-hover:
+    0px 0px 0px 1px rgb(42 36 24 / 0.08),
+    0px 1px 2px -1px rgb(42 36 24 / 0.08),
+    0px 4px 12px 0px rgb(42 36 24 / 0.08);
+
+  --ease-out-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+html[data-overlay="cream"] {
+  --read-bg: var(--color-paper);
+  --read-fg: var(--color-ink);
+}
+html[data-overlay="lemon"] {
+  --read-bg: var(--color-lemon);
+  --read-fg: var(--color-ink);
+}
+html[data-overlay="sky"] {
+  --read-bg: var(--color-sky);
+  --read-fg: var(--color-sky-ink);
+}
+html[data-overlay="mint"] {
+  --read-bg: var(--color-mint);
+  --read-fg: var(--color-mint-ink);
+}
+
+.read-copy {
+  font-size: calc(1.35rem * var(--read-scale, 1));
+  line-height: 1.85;
+  letter-spacing: var(--read-tracking, 0.06em);
+  word-spacing: 0.18em;
+  color: var(--read-fg, var(--color-ink));
+  font-weight: 500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
