@@ -88,6 +88,18 @@ export const SYLLABLE_WORDS: SyllableWord[] = [
   { id: "too", word: "töö", syllables: ["töö"], hint: "seda tehakse koolis ja kodus" },
   { id: "oun", word: "õun", syllables: ["õun"], hint: "punane või roheline vili" },
   { id: "pere", word: "pere", syllables: ["pe", "re"], hint: "ema, isa ja lapsed" },
+  { id: "kell", word: "kell", syllables: ["kell"], hint: "näitab aega" },
+  { id: "tool", word: "tool", syllables: ["tool"], hint: "sellel istutakse" },
+  { id: "aken", word: "aken", syllables: ["a", "ken"], hint: "sealt paistab valgus" },
+  { id: "lill", word: "lill", syllables: ["lill"], hint: "kasvab peenras" },
+  { id: "vesi", word: "vesi", syllables: ["ve", "si"], hint: "seda juuakse" },
+  { id: "leib", word: "leib", syllables: ["leib"], hint: "süüakse võiga" },
+  { id: "pilv", word: "pilv", syllables: ["pilv"], hint: "hõljub taevas" },
+  { id: "tuba", word: "tuba", syllables: ["tu", "ba"], hint: "osa majast" },
+  { id: "kiik", word: "kiik", syllables: ["kiik"], hint: "mänguväljakul" },
+  { id: "auto", word: "auto", syllables: ["au", "to"], hint: "sõidab teel" },
+  { id: "jalgratas", word: "jalgratas", syllables: ["jal", "gra", "tas"], hint: "sõidetakse jalgadega" },
+  { id: "suvi", word: "suvi", syllables: ["su", "vi"], hint: "soe aastaaeg" },
 ];
 
 function w(display: string, ...syllables: string[]): StoryWord {
@@ -277,6 +289,104 @@ export const STORIES: Story[] = [
     ],
     question: { prompt: "Kuhu Triin läheb?", options: ["Raamatukokku", "Poodi", "Metsa"], answer: 0 },
   },
+  {
+    id: "aed",
+    title: "Aias",
+    kicker: "Roheline peenar",
+    sentences: [
+      [w("Ema", "E", "ma"), w("ja", "ja"), w("Anna", "An", "na"), w("lähevad", "lä", "he", "vad"), w("aeda.", "ae", "da")],
+      [w("Peenras", "Pee", "nras"), w("kasvavad", "kas", "va", "vad"), w("punased", "pu", "na", "sed"), w("tomatid.", "to", "ma", "tid")],
+      [w("Anna", "An", "na"), w("kastab", "kas", "tab"), w("taimi", "tai", "mi"), w("veega.", "vee", "ga")],
+      [w("Mesilane", "Me", "si", "la", "ne"), w("lendab", "len", "dab"), w("lille", "lil", "le"), w("juurde.", "juur", "de")],
+      [w("Nad", "Nad"), w("korjavad", "kor", "ja", "vad"), w("kolm", "kolm"), w("tomatit.", "to", "ma", "tit")],
+      [w("Köögis", "Köö", "gis"), w("lõhnab", "lõh", "nab"), w("värske", "värs", "ke"), w("toit.", "toit")],
+    ],
+    question: { prompt: "Mida Anna taimedega teeb?", options: ["Kastab neid", "Lõikab neid", "Peidab neid"], answer: 0 },
+  },
+  {
+    id: "park",
+    title: "Pargis",
+    kicker: "Kiik ja liiv",
+    sentences: [
+      [w("Pärast", "Pä", "rast"), w("kooli", "koo", "li"), w("läheb", "lä", "heb"), w("Marko", "Mar", "ko"), w("parki.", "par", "ki")],
+      [w("Seal", "Seal"), w("on", "on"), w("suur", "suur"), w("kiik.", "kiik")],
+      [w("Marko", "Mar", "ko"), w("kiigub", "kii", "gub"), w("kõrgele.", "kõr", "ge", "le")],
+      [w("Siis", "Siis"), w("mängib", "män", "gib"), w("ta", "ta"), w("liivakastis.", "lii", "va", "kas", "tis")],
+      [w("Ta", "Ta"), w("teeb", "teeb"), w("väikese", "väi", "ke", "se"), w("lossi.", "los", "si")],
+      [w("Koju", "Ko", "ju"), w("minnes", "min", "nes"), w("on", "on"), w("käed", "käed"), w("liivased.", "lii", "va", "sed")],
+    ],
+    question: { prompt: "Kus Marko lossi teeb?", options: ["Liivakastis", "Koolis", "Bussis"], answer: 0 },
+  },
+  {
+    id: "supp",
+    title: "Soe supp",
+    kicker: "Lõuna laual",
+    sentences: [
+      [w("Lõunaks", "Lõu", "naks"), w("on", "on"), w("lauas", "lau", "as"), w("soe", "soe"), w("supp.", "supp")],
+      [w("Supis", "Su", "pis"), w("on", "on"), w("porgand", "por", "gand"), w("ja", "ja"), w("kartul.", "kar", "tul")],
+      [w("Isa", "I", "sa"), w("paneb", "pa", "neb"), w("laua", "lau", "a"), w("ääres", "ää", "res"), w("leiba.", "lei", "ba")],
+      [w("Lapsed", "Lap", "sed"), w("söövad", "söö", "vad"), w("vaikselt.", "vaik", "selt")],
+      [w("Pärast", "Pä", "rast"), w("saavad", "saa", "vad"), w("nad", "nad"), w("õuna.", "õu", "na")],
+      [w("Kõht", "Kõht"), w("on", "on"), w("täis", "täis"), w("ja", "ja"), w("kõik", "kõik"), w("on", "on"), w("rahul.", "ra", "hul")],
+    ],
+    question: { prompt: "Mis on lõunaks lauas?", options: ["Supp", "Jäätis", "Kook"], answer: 0 },
+  },
+  {
+    id: "lind",
+    title: "Linnupesa",
+    kicker: "Okstel peidus",
+    sentences: [
+      [w("Õues", "Õu", "es"), w("on", "on"), w("vana", "va", "na"), w("õunapuu.", "õu", "na", "puu")],
+      [w("Puu", "Puu"), w("okstel", "oks", "tel"), w("on", "on"), w("väike", "väi", "ke"), w("pesa.", "pe", "sa")],
+      [w("Seal", "Seal"), w("elab", "e", "lab"), w("hall", "hall"), w("lind.", "lind")],
+      [w("Lind", "Lind"), w("toob", "toob"), w("pojale", "po", "ja", "le"), w("ussi.", "us", "si")],
+      [w("Lapsed", "Lap", "sed"), w("vaatavad", "vaa", "ta", "vad"), w("eemale", "ee", "ma", "le"), w("ja", "ja"), w("vaikselt.", "vaik", "selt")],
+      [w("Nad", "Nad"), w("ei", "ei"), w("taha", "ta", "ha"), w("pesa", "pe", "sa"), w("hirmutada.", "hir", "mu", "ta", "da")],
+    ],
+    question: { prompt: "Kus on linnupesa?", options: ["Õunapuu okstel", "Majas", "Bussis"], answer: 0 },
+  },
+  {
+    id: "poed",
+    title: "Poes",
+    kicker: "Väike ost",
+    sentences: [
+      [w("Ema", "E", "ma"), w("ja", "ja"), w("Tom", "Tom"), w("lähevad", "lä", "he", "vad"), w("poodi.", "poo", "di")],
+      [w("Tom", "Tom"), w("hoiab", "hoi", "ab"), w("ostukorvi.", "os", "tu", "kor", "vi")],
+      [w("Nad", "Nad"), w("võtavad", "võ", "ta", "vad"), w("piima", "pii", "ma"), w("ja", "ja"), w("leiba.", "lei", "ba")],
+      [w("Kassas", "Kas", "sas"), w("ütleb", "üt", "leb"), w("Tom", "Tom"), w("aitäh.", "ai", "täh")],
+      [w("Tee", "Tee"), w("peal", "peal"), w("kannab", "kan", "nab"), w("ta", "ta"), w("kotti.", "kot", "ti")],
+      [w("Kodus", "Ko", "dus"), w("paneb", "pa", "neb"), w("ema", "e", "ma"), w("asjad", "as", "jad"), w("kappi.", "kap", "pi")],
+    ],
+    question: { prompt: "Mida Tom poes hoiab?", options: ["Ostukorvi", "Raamatut", "Palli"], answer: 0 },
+  },
+  {
+    id: "talv",
+    title: "Talvehommik",
+    kicker: "Külm ja hele",
+    sentences: [
+      [w("Hommikul", "Hom", "mi", "kul"), w("on", "on"), w("aken", "a", "ken"), w("jäine.", "jäi", "ne")],
+      [w("Õues", "Õu", "es"), w("sädeleb", "sä", "de", "leb"), w("lumi.", "lu", "mi")],
+      [w("Laura", "Lau", "ra"), w("paneb", "pa", "neb"), w("sooja", "soo", "ja"), w("mütsi.", "mü", "tsi")],
+      [w("Ta", "Ta"), w("astub", "as", "tub"), w("ettevaatlikult", "et", "te", "vaa", "tli", "kult"), w("õue.", "õu", "e")],
+      [w("Jalad", "Ja", "lad"), w("krõbisevad", "krõ", "bi", "se", "vad"), w("lumes.", "lu", "mes")],
+      [w("Laura", "Lau", "ra"), w("naeratab", "nae", "ra", "tab"), w("ja", "ja"), w("hingab", "hin", "gab"), w("auru.", "au", "ru")],
+    ],
+    question: { prompt: "Mis on õues?", options: ["Lumi", "Vihm", "Liiv"], answer: 0 },
+  },
+  {
+    id: "joonistus",
+    title: "Joonistus",
+    kicker: "Värvid laual",
+    sentences: [
+      [w("Tundides", "Tun", "di", "des"), w("võtab", "võ", "tab"), w("Saara", "Saa", "ra"), w("pliiatsid.", "plii", "at", "sid")],
+      [w("Ta", "Ta"), w("joonistab", "joo", "nis", "tab"), w("suure", "suu", "re"), w("päikese.", "päi", "ke", "se")],
+      [w("Siis", "Siis"), w("lisab", "li", "sab"), w("ta", "ta"), w("sinise", "si", "ni", "se"), w("maja.", "ma", "ja")],
+      [w("Õpetaja", "Õ", "pe", "ta", "ja"), w("vaatab", "vaa", "tab"), w("ja", "ja"), w("noogutab.", "noo", "gu", "tab")],
+      [w("Saara", "Saa", "ra"), w("värvib", "vär", "vib"), w("taeva", "tae", "va"), w("heledaks.", "he", "le", "daks")],
+      [w("Pildi", "Pil", "di"), w("alla", "al", "la"), w("kirjutab", "kir", "ju", "tab"), w("ta", "ta"), w("oma", "o", "ma"), w("nime.", "ni", "me")],
+    ],
+    question: { prompt: "Mida Saara kõigepealt joonistab?", options: ["Päikese", "Auto", "Koera"], answer: 0 },
+  },
 ];
 
 export const CHOICE_QUIZ: ChoiceQuiz[] = [
@@ -294,6 +404,13 @@ export const CHOICE_QUIZ: ChoiceQuiz[] = [
   { id: "c12", kind: "choice", prompt: "Kumb on õige sõna öö kohta?", options: ["öö", "oo", "õõ"], answer: 0 },
   { id: "c13", kind: "choice", prompt: "Kumb on õige sõna bussi kohta?", options: ["buss", "duss", "puss"], answer: 0 },
   { id: "c14", kind: "choice", prompt: "Kumb on õige sõna palli kohta?", options: ["pall", "ball", "dall"], answer: 0 },
+  { id: "c15", kind: "choice", prompt: "Kumb on õige sõna vee kohta?", options: ["vesi", "vezi", "wäsi"], answer: 0 },
+  { id: "c16", kind: "choice", prompt: "Kumb on õige sõna leiva kohta?", options: ["leib", "leip", "leiv"], answer: 0 },
+  { id: "c17", kind: "choice", prompt: "Kumb on õige sõna akna kohta?", options: ["aken", "agen", "akenk"], answer: 0 },
+  { id: "c18", kind: "choice", prompt: "Kumb on õige sõna lille kohta?", options: ["lill", "lil", "liil"], answer: 0 },
+  { id: "c19", kind: "choice", prompt: "Kumb on õige sõna kella kohta?", options: ["kell", "gel", "kelll"], answer: 0 },
+  { id: "c20", kind: "choice", prompt: "Kumb on õige sõna pilve kohta?", options: ["pilv", "bilv", "pilf"], answer: 0 },
+  { id: "c21", kind: "choice", prompt: "Kumb on õige sõna suve kohta?", options: ["suvi", "suwi", "sufi"], answer: 0 },
 ];
 
 export const MISSING_QUIZ: MissingQuiz[] = [
@@ -311,6 +428,13 @@ export const MISSING_QUIZ: MissingQuiz[] = [
   { id: "m12", kind: "missing", word: "süda", blank: 1, options: ["ü", "u", "i", "ö"], answer: 0 },
   { id: "m13", kind: "missing", word: "buss", blank: 0, options: ["b", "d", "p", "g"], answer: 0 },
   { id: "m14", kind: "missing", word: "pall", blank: 0, options: ["p", "b", "d", "t"], answer: 0 },
+  { id: "m15", kind: "missing", word: "vesi", blank: 1, options: ["e", "ä", "a", "i"], answer: 0 },
+  { id: "m16", kind: "missing", word: "leib", blank: 2, options: ["i", "e", "a", "ä"], answer: 0 },
+  { id: "m17", kind: "missing", word: "aken", blank: 0, options: ["a", "ä", "e", "o"], answer: 0 },
+  { id: "m18", kind: "missing", word: "lill", blank: 1, options: ["i", "e", "ü", "ä"], answer: 0 },
+  { id: "m19", kind: "missing", word: "kell", blank: 1, options: ["e", "ä", "a", "ö"], answer: 0 },
+  { id: "m20", kind: "missing", word: "pilv", blank: 1, options: ["i", "e", "ä", "u"], answer: 0 },
+  { id: "m21", kind: "missing", word: "tuba", blank: 1, options: ["u", "ü", "o", "ö"], answer: 0 },
 ];
 
 export const SAME_QUIZ: SameQuiz[] = [
@@ -328,6 +452,13 @@ export const SAME_QUIZ: SameQuiz[] = [
   { id: "s12", kind: "same", a: "pall", b: "ball", same: false },
   { id: "s13", kind: "same", a: "buss", b: "duss", same: false },
   { id: "s14", kind: "same", a: "tuba", b: "tuba", same: true },
+  { id: "s15", kind: "same", a: "vesi", b: "vesi", same: true },
+  { id: "s16", kind: "same", a: "leib", b: "leip", same: false },
+  { id: "s17", kind: "same", a: "aken", b: "agen", same: false },
+  { id: "s18", kind: "same", a: "lill", b: "lill", same: true },
+  { id: "s19", kind: "same", a: "kell", b: "gel", same: false },
+  { id: "s20", kind: "same", a: "pilv", b: "pilv", same: true },
+  { id: "s21", kind: "same", a: "suvi", b: "sufi", same: false },
 ];
 
 export const LISTEN_QUIZ: ListenQuiz[] = [
@@ -340,6 +471,13 @@ export const LISTEN_QUIZ: ListenQuiz[] = [
   { id: "l7", kind: "listen", word: "töö", options: ["töö", "too", "tõõ"], answer: 0 },
   { id: "l8", kind: "listen", word: "hommik", options: ["hommik", "homik", "hammik"], answer: 0 },
   { id: "l9", kind: "listen", word: "buss", options: ["buss", "duss", "puss"], answer: 0 },
+  { id: "l10", kind: "listen", word: "vesi", options: ["vesi", "vesa", "väsi"], answer: 0 },
+  { id: "l11", kind: "listen", word: "leib", options: ["leib", "leip", "leiv"], answer: 0 },
+  { id: "l12", kind: "listen", word: "aken", options: ["aken", "agen", "akon"], answer: 0 },
+  { id: "l13", kind: "listen", word: "lill", options: ["lill", "lil", "liil"], answer: 0 },
+  { id: "l14", kind: "listen", word: "kell", options: ["kell", "gel", "käll"], answer: 0 },
+  { id: "l15", kind: "listen", word: "pilv", options: ["pilv", "bilv", "pälv"], answer: 0 },
+  { id: "l16", kind: "listen", word: "suvi", options: ["suvi", "sufi", "süvi"], answer: 0 },
 ];
 
 export const ENCOURAGE_OK = ["Tubli.", "Väga hea.", "Just nii.", "Hästi loetud.", "Täpselt."];
