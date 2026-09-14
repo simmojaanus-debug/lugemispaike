@@ -100,6 +100,39 @@ export const SYLLABLE_WORDS: SyllableWord[] = [
   { id: "auto", word: "auto", syllables: ["au", "to"], hint: "sõidab teel" },
   { id: "jalgratas", word: "jalgratas", syllables: ["jal", "gra", "tas"], hint: "sõidetakse jalgadega" },
   { id: "suvi", word: "suvi", syllables: ["su", "vi"], hint: "soe aastaaeg" },
+  { id: "kass", word: "kass", syllables: ["kass"], hint: "nurruv loom kodus" },
+  { id: "koer", word: "koer", syllables: ["koer"], hint: "haugub ja valvab" },
+  { id: "pall", word: "pall", syllables: ["pall"], hint: "sellega mängitakse" },
+  { id: "raamatukogu", word: "raamatukogu", syllables: ["raa", "ma", "tu", "ko", "gu"], hint: "koht, kus laenutatakse raamatuid" },
+  { id: "koolilaud", word: "koolilaud", syllables: ["koo", "li", "laud"], hint: "selle taga istutakse tunnis" },
+  { id: "joonistus", word: "joonistus", syllables: ["joo", "nis", "tus"], hint: "pilt paberil" },
+  { id: "porgand", word: "porgand", syllables: ["por", "gand"], hint: "oranž juurvili" },
+  { id: "kartul", word: "kartul", syllables: ["kar", "tul"], hint: "kasvab mullas" },
+  { id: "tomat", word: "tomat", syllables: ["to", "mat"], hint: "punane vili peenras" },
+  { id: "kivike", word: "kivike", syllables: ["ki", "vi", "ke"], hint: "väike kivi" },
+  { id: "meri", word: "meri", syllables: ["me", "ri"], hint: "suur soolane vesi" },
+  { id: "rand", word: "rand", syllables: ["rand"], hint: "mere äär" },
+  { id: "tuul", word: "tuul", syllables: ["tuul"], hint: "liigutab lehti" },
+  { id: "mets", word: "mets", syllables: ["mets"], hint: "palju puid koos" },
+  { id: "sammal", word: "sammal", syllables: ["sam", "mal"], hint: "pehme roheline kate" },
+  { id: "kabi", word: "käbi", syllables: ["kä", "bi"], hint: "kuuselt või männi otsast" },
+  { id: "linnulaul", word: "linnulaul", syllables: ["lin", "nu", "laul"], hint: "lindude hääl" },
+  { id: "hommikupuder", word: "hommikupuder", syllables: ["hom", "mi", "ku", "pu", "der"], hint: "soe toit hommikul" },
+  { id: "piim", word: "piim", syllables: ["piim"], hint: "valge jook" },
+  { id: "supp", word: "supp", syllables: ["supp"], hint: "soe toit kausis" },
+  { id: "sai", word: "sai", syllables: ["sai"], hint: "pehme küpsetis" },
+  { id: "kook", word: "kook", syllables: ["kook"], hint: "magus maius" },
+  { id: "kuu", word: "kuu", syllables: ["kuu"], hint: "paistab öösel" },
+  { id: "taht", word: "täht", syllables: ["täht"], hint: "sädeleb taevas" },
+  { id: "lamp", word: "lamp", syllables: ["lamp"], hint: "annab toas valgust" },
+  { id: "kapp", word: "kapp", syllables: ["kapp"], hint: "sinna pannakse asju" },
+  { id: "uks", word: "uks", syllables: ["uks"], hint: "sellest minnakse sisse" },
+  { id: "trepp", word: "trepp", syllables: ["trepp"], hint: "mööda seda minnakse üles" },
+  { id: "varav", word: "värav", syllables: ["vä", "rav"], hint: "aiast sissepääs" },
+  { id: "kiiver", word: "kiiver", syllables: ["kii", "ver"], hint: "kaitseb pead" },
+  { id: "rattarada", word: "rattarada", syllables: ["rat", "ta", "ra", "da"], hint: "tee jalgratastele" },
+  { id: "nukk", word: "nukk", syllables: ["nukk"], hint: "mänguasi" },
+
 ];
 
 function w(display: string, ...syllables: string[]): StoryWord {
@@ -387,6 +420,77 @@ export const STORIES: Story[] = [
     ],
     question: { prompt: "Mida Saara kõigepealt joonistab?", options: ["Päikese", "Auto", "Koera"], answer: 0 },
   },
+  {
+    id: "kassipoeg",
+    title: "Kassipoeg",
+    kicker: "Pehme pall toas",
+    sentences: [
+      [w("Toas", "To", "as"), w("elab", "e", "lab"), w("väike", "väi", "ke"), w("kassipoeg.", "kas", "si", "poeg")],
+      [w("Tal", "Tal"), w("on", "on"), w("pehmed", "peh", "med"), w("käpad.", "kä", "pad")],
+      [w("Kassipoeg", "Kas", "si", "poeg"), w("mängib", "män", "gib"), w("sinise", "si", "ni", "se"), w("nööriga.", "nöö", "ri", "ga")],
+      [w("Siis", "Siis"), w("hüppab", "hüp", "pab"), w("ta", "ta"), w("toolile.", "too", "li", "le")],
+      [w("Ema", "E", "ma"), w("naeratab", "nae", "ra", "tab"), w("ja", "ja"), w("silitab", "si", "li", "tab"), w("teda.", "te", "da")],
+      [w("Õhtul", "Õh", "tul"), w("magab", "ma", "gab"), w("kassipoeg", "kas", "si", "poeg"), w("padjal.", "pad", "jal")],
+    ],
+    question: { prompt: "Millega kassipoeg mängib?", options: ["Sinise nööriga", "Punase palliga", "Rohelise lehega"], answer: 0 },
+  },
+  {
+    id: "sild",
+    title: "Väike sild",
+    kicker: "Üle oja",
+    sentences: [
+      [w("Metsas", "Met", "sas"), w("on", "on"), w("väike", "väi", "ke"), w("oja.", "o", "ja")],
+      [w("Oja", "O", "ja"), w("peal", "peal"), w("on", "on"), w("puust", "puust"), w("sild.", "sild")],
+      [w("Mikk", "Mikk"), w("astub", "as", "tub"), w("sillale", "sil", "la", "le"), w("ettevaatlikult.", "et", "te", "vaa", "tli", "kult")],
+      [w("Vesi", "Ve", "si"), w("voolab", "voo", "lab"), w("vaikselt", "vaik", "selt"), w("all.", "all")],
+      [w("Teisel", "Tei", "sel"), w("kaldal", "kal", "dal"), w("kasvab", "kas", "vab"), w("kollane", "kol", "la", "ne"), w("lill.", "lill")],
+      [w("Mikk", "Mikk"), w("võtab", "võ", "tab"), w("foto", "fo", "to"), w("ja", "ja"), w("läheb", "lä", "heb"), w("edasi.", "e", "da", "si")],
+    ],
+    question: { prompt: "Mis on oja peal?", options: ["Puust sild", "Suur kivi", "Vana auto"], answer: 0 },
+  },
+  {
+    id: "tahtede",
+    title: "Tähed taevas",
+    kicker: "Selge õhtu",
+    sentences: [
+      [w("Õhtul", "Õh", "tul"), w("on", "on"), w("taevas", "tae", "vas"), w("selge.", "sel", "ge")],
+      [w("Eva", "E", "va"), w("ja", "ja"), w("isa", "i", "sa"), w("vaatavad", "vaa", "ta", "vad"), w("õue.", "õu", "e")],
+      [w("Kuu", "Kuu"), w("on", "on"), w("hele", "he", "le"), w("ja", "ja"), w("ümmargune.", "üm", "mar", "gu", "ne")],
+      [w("Ümber", "Üm", "ber"), w("kuu", "kuu"), w("sädelevad", "sä", "de", "le", "vad"), w("väikesed", "väi", "ke", "sed"), w("tähed.", "tä", "hed")],
+      [w("Eva", "E", "va"), w("loeb", "loeb"), w("neid", "neid"), w("vaikselt.", "vaik", "selt")],
+      [w("Isa", "I", "sa"), w("ütleb,", "üt", "leb"), w("et", "et"), w("varsti", "vars", "ti"), w("on", "on"), w("aeg", "aeg"), w("magama.", "ma", "ga", "ma")],
+    ],
+    question: { prompt: "Mis sädeleb kuu ümber?", options: ["Tähed", "Pilved", "Linnud"], answer: 0 },
+  },
+  {
+    id: "koogivili",
+    title: "Köögiviljasupp",
+    kicker: "Lõhnav pott",
+    sentences: [
+      [w("Isa", "I", "sa"), w("keedab", "kee", "dab"), w("köögis", "köö", "gis"), w("suppi.", "sup", "pi")],
+      [w("Potti", "Pot", "ti"), w("läheb", "lä", "heb"), w("porgand", "por", "gand"), w("ja", "ja"), w("kartul.", "kar", "tul")],
+      [w("Siis", "Siis"), w("lisab", "li", "sab"), w("ta", "ta"), w("väikese", "väi", "ke", "se"), w("soola.", "soo", "la")],
+      [w("Lapsed", "Lap", "sed"), w("aitavad", "ai", "ta", "vad"), w("laua", "lau", "a"), w("katta.", "kat", "ta")],
+      [w("Supp", "Supp"), w("on", "on"), w("soe", "soe"), w("ja", "ja"), w("maitsev.", "mai", "tsev")],
+      [w("Pärast", "Pä", "rast"), w("sööki", "söö", "ki"), w("peseb", "pe", "seb"), w("igaüks", "i", "ga", "üks"), w("nõud.", "nõud")],
+    ],
+    question: { prompt: "Kes keedab suppi?", options: ["Isa", "Ema", "Naaber"], answer: 0 },
+  },
+  {
+    id: "kiigel",
+    title: "Kiigel",
+    kicker: "Kõrgele ja tagasi",
+    sentences: [
+      [w("Pargis", "Par", "gis"), w("on", "on"), w("pikk", "pikk"), w("kiik.", "kiik")],
+      [w("Helen", "He", "len"), w("istub", "is", "tub"), w("kiigele.", "kii", "ge", "le")],
+      [w("Isa", "I", "sa"), w("lükkab", "lük", "kab"), w("teda", "te", "da"), w("ettevaatlikult.", "et", "te", "vaa", "tli", "kult")],
+      [w("Helen", "He", "len"), w("lendab", "len", "dab"), w("kõrgele", "kõr", "ge", "le"), w("ja", "ja"), w("naerab.", "nae", "rab")],
+      [w("Tuul", "Tuul"), w("puhub", "pu", "hub"), w("näkku.", "näk", "ku")],
+      [w("Siis", "Siis"), w("lähevad", "lä", "he", "vad"), w("nad", "nad"), w("koos", "koos"), w("koju.", "ko", "ju")],
+    ],
+    question: { prompt: "Kes lükkab Heleni kiigel?", options: ["Isa", "Õde", "Sõber"], answer: 0 },
+  },
+
 ];
 
 export const CHOICE_QUIZ: ChoiceQuiz[] = [
@@ -411,6 +515,16 @@ export const CHOICE_QUIZ: ChoiceQuiz[] = [
   { id: "c19", kind: "choice", prompt: "Kumb on õige sõna kella kohta?", options: ["kell", "gel", "kelll"], answer: 0 },
   { id: "c20", kind: "choice", prompt: "Kumb on õige sõna pilve kohta?", options: ["pilv", "bilv", "pilf"], answer: 0 },
   { id: "c21", kind: "choice", prompt: "Kumb on õige sõna suve kohta?", options: ["suvi", "suwi", "sufi"], answer: 0 },
+  { id: "c22", kind: "choice", prompt: "Kumb on õige sõna mere kohta?", options: ["meri", "merri", "märi"], answer: 0 },
+  { id: "c23", kind: "choice", prompt: "Kumb on õige sõna tuule kohta?", options: ["tuul", "tuulll", "tuyl"], answer: 0 },
+  { id: "c24", kind: "choice", prompt: "Kumb on õige sõna metsa kohta?", options: ["mets", "meds", "metss"], answer: 0 },
+  { id: "c25", kind: "choice", prompt: "Kumb on õige sõna käbi kohta?", options: ["käbi", "kabi", "käpi"], answer: 0 },
+  { id: "c26", kind: "choice", prompt: "Kumb on õige sõna tähe kohta?", options: ["täht", "taht", "tähtt"], answer: 0 },
+  { id: "c27", kind: "choice", prompt: "Kumb on õige sõna värava kohta?", options: ["värav", "varav", "värraf"], answer: 0 },
+  { id: "c28", kind: "choice", prompt: "Kumb on õige sõna porgandi kohta?", options: ["porgand", "porcant", "porgant"], answer: 0 },
+  { id: "c29", kind: "choice", prompt: "Kumb on õige sõna kartuli kohta?", options: ["kartul", "kartull", "gardul"], answer: 0 },
+  { id: "c30", kind: "choice", prompt: "Kumb on õige sõna kiivri kohta?", options: ["kiiver", "kiiverr", "giiver"], answer: 0 },
+
 ];
 
 export const MISSING_QUIZ: MissingQuiz[] = [
@@ -435,6 +549,16 @@ export const MISSING_QUIZ: MissingQuiz[] = [
   { id: "m19", kind: "missing", word: "kell", blank: 1, options: ["e", "ä", "a", "ö"], answer: 0 },
   { id: "m20", kind: "missing", word: "pilv", blank: 1, options: ["i", "e", "ä", "u"], answer: 0 },
   { id: "m21", kind: "missing", word: "tuba", blank: 1, options: ["u", "ü", "o", "ö"], answer: 0 },
+  { id: "m22", kind: "missing", word: "meri", blank: 1, options: ["e", "ä", "a", "ö"], answer: 0 },
+  { id: "m23", kind: "missing", word: "tuul", blank: 1, options: ["u", "ü", "o", "ö"], answer: 0 },
+  { id: "m24", kind: "missing", word: "käbi", blank: 1, options: ["ä", "a", "e", "ö"], answer: 0 },
+  { id: "m25", kind: "missing", word: "täht", blank: 1, options: ["ä", "a", "e", "ö"], answer: 0 },
+  { id: "m26", kind: "missing", word: "värav", blank: 1, options: ["ä", "a", "e", "ö"], answer: 0 },
+  { id: "m27", kind: "missing", word: "porgand", blank: 1, options: ["o", "ö", "a", "u"], answer: 0 },
+  { id: "m28", kind: "missing", word: "kartul", blank: 1, options: ["a", "ä", "e", "o"], answer: 0 },
+  { id: "m29", kind: "missing", word: "kiiver", blank: 2, options: ["i", "e", "ä", "ü"], answer: 0 },
+  { id: "m30", kind: "missing", word: "sammal", blank: 1, options: ["a", "ä", "e", "o"], answer: 0 },
+
 ];
 
 export const SAME_QUIZ: SameQuiz[] = [
@@ -459,6 +583,16 @@ export const SAME_QUIZ: SameQuiz[] = [
   { id: "s19", kind: "same", a: "kell", b: "gel", same: false },
   { id: "s20", kind: "same", a: "pilv", b: "pilv", same: true },
   { id: "s21", kind: "same", a: "suvi", b: "sufi", same: false },
+  { id: "s22", kind: "same", a: "meri", b: "meri", same: true },
+  { id: "s23", kind: "same", a: "tuul", b: "tuul", same: true },
+  { id: "s24", kind: "same", a: "mets", b: "meds", same: false },
+  { id: "s25", kind: "same", a: "käbi", b: "kabi", same: false },
+  { id: "s26", kind: "same", a: "täht", b: "taht", same: false },
+  { id: "s27", kind: "same", a: "värav", b: "värav", same: true },
+  { id: "s28", kind: "same", a: "porgand", b: "porcant", same: false },
+  { id: "s29", kind: "same", a: "kartul", b: "kartul", same: true },
+  { id: "s30", kind: "same", a: "kiiver", b: "giiver", same: false },
+
 ];
 
 export const LISTEN_QUIZ: ListenQuiz[] = [
@@ -478,6 +612,15 @@ export const LISTEN_QUIZ: ListenQuiz[] = [
   { id: "l14", kind: "listen", word: "kell", options: ["kell", "gel", "käll"], answer: 0 },
   { id: "l15", kind: "listen", word: "pilv", options: ["pilv", "bilv", "pälv"], answer: 0 },
   { id: "l16", kind: "listen", word: "suvi", options: ["suvi", "sufi", "süvi"], answer: 0 },
+  { id: "l17", kind: "listen", word: "meri", options: ["meri", "märi", "mõri"], answer: 0 },
+  { id: "l18", kind: "listen", word: "tuul", options: ["tuul", "tuyl", "tül"], answer: 0 },
+  { id: "l19", kind: "listen", word: "käbi", options: ["käbi", "kabi", "kebi"], answer: 0 },
+  { id: "l20", kind: "listen", word: "täht", options: ["täht", "taht", "teht"], answer: 0 },
+  { id: "l21", kind: "listen", word: "värav", options: ["värav", "varav", "verav"], answer: 0 },
+  { id: "l22", kind: "listen", word: "porgand", options: ["porgand", "porcant", "pergand"], answer: 0 },
+  { id: "l23", kind: "listen", word: "kartul", options: ["kartul", "kartull", "kertul"], answer: 0 },
+  { id: "l24", kind: "listen", word: "kiiver", options: ["kiiver", "giiver", "keiver"], answer: 0 },
+
 ];
 
 export const ENCOURAGE_OK = ["Tubli.", "Väga hea.", "Just nii.", "Hästi loetud.", "Täpselt."];
