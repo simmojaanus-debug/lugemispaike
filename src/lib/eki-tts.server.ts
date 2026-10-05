@@ -19,10 +19,21 @@ export function sanitizeTtsText(raw: string): string {
 
 async function synthub(voice: number, text: string): Promise<SynthubResponse> {
   const url = `${SYNTHUB}?v=${voice}&t=${encodeURIComponent(text)}`;
-  const res = await fetch(url, {
-    headers: { Accept: "application/json", "User-Agent": "Lugemispaike/1.0" },
-    signal: AbortSignal.timeout(20_000),
-  });
+  let res: Response;
+  try {
+    res = await fetch(url, {
+      headers: {
+        Accept: "application/json",
+        "User-Agent": "Mozilla/5.0 (compatible; Lugemispaike/1.0; +https://temporary-rushing-onyx-i2srgy1.vercel.app)",
+        "Accept-Language": "et-EE,et;q=0.9",
+      },
+      signal: AbortSignal.timeout(25_000),
+      cache: "no-store",
+    });
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : "network error";
+    throw new Error(`EKI synthub unreachable (${msg})`);
+  }
   if (!res.ok) {
     throw new Error(`EKI synthub HTTP ${res.status}`);
   }
