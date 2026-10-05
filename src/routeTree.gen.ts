@@ -17,6 +17,7 @@ import { Route as MangudRouteImport } from './routes/mangud'
 import { Route as MinaRouteImport } from './routes/mina'
 import { Route as SilbidRouteImport } from './routes/silbid'
 import { Route as VanemateleRouteImport } from './routes/vanematele'
+import { Route as ApiTtsRouteImport } from './routes/api/tts'
 import { Route as LuguIdRouteImport } from './routes/lugu.$id'
 import { Route as MangKindRouteImport } from './routes/mang.$kind'
 
@@ -60,6 +61,11 @@ const VanemateleRoute = VanemateleRouteImport.update({
   path: '/vanematele',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiTtsRoute = ApiTtsRouteImport.update({
+  id: '/api/tts',
+  path: '/api/tts',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LuguIdRoute = LuguIdRouteImport.update({
   id: '/lugu/$id',
   path: '/lugu/$id',
@@ -80,6 +86,7 @@ export interface FileRoutesByFullPath {
   '/mina': typeof MinaRoute
   '/silbid': typeof SilbidRoute
   '/vanematele': typeof VanemateleRoute
+  '/api/tts': typeof ApiTtsRoute
   '/lugu/$id': typeof LuguIdRoute
   '/mang/$kind': typeof MangKindRoute
 }
@@ -92,6 +99,7 @@ export interface FileRoutesByTo {
   '/mina': typeof MinaRoute
   '/silbid': typeof SilbidRoute
   '/vanematele': typeof VanemateleRoute
+  '/api/tts': typeof ApiTtsRoute
   '/lugu/$id': typeof LuguIdRoute
   '/mang/$kind': typeof MangKindRoute
 }
@@ -105,6 +113,7 @@ export interface FileRoutesById {
   '/mina': typeof MinaRoute
   '/silbid': typeof SilbidRoute
   '/vanematele': typeof VanemateleRoute
+  '/api/tts': typeof ApiTtsRoute
   '/lugu/$id': typeof LuguIdRoute
   '/mang/$kind': typeof MangKindRoute
 }
@@ -119,6 +128,7 @@ export interface FileRouteTypes {
     | '/mina'
     | '/silbid'
     | '/vanematele'
+    | '/api/tts'
     | '/lugu/$id'
     | '/mang/$kind'
   fileRoutesByTo: FileRoutesByTo
@@ -131,6 +141,7 @@ export interface FileRouteTypes {
     | '/mina'
     | '/silbid'
     | '/vanematele'
+    | '/api/tts'
     | '/lugu/$id'
     | '/mang/$kind'
   id:
@@ -143,6 +154,7 @@ export interface FileRouteTypes {
     | '/mina'
     | '/silbid'
     | '/vanematele'
+    | '/api/tts'
     | '/lugu/$id'
     | '/mang/$kind'
   fileRoutesById: FileRoutesById
@@ -156,6 +168,7 @@ export interface RootRouteChildren {
   MinaRoute: typeof MinaRoute
   SilbidRoute: typeof SilbidRoute
   VanemateleRoute: typeof VanemateleRoute
+  ApiTtsRoute: typeof ApiTtsRoute
   LuguIdRoute: typeof LuguIdRoute
   MangKindRoute: typeof MangKindRoute
 }
@@ -218,6 +231,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VanemateleRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/tts': {
+      id: '/api/tts'
+      path: '/api/tts'
+      fullPath: '/api/tts'
+      preLoaderRoute: typeof ApiTtsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/lugu/$id': {
       id: '/lugu/$id'
       path: '/lugu/$id'
@@ -244,6 +264,7 @@ const rootRouteChildren: RootRouteChildren = {
   MinaRoute: MinaRoute,
   SilbidRoute: SilbidRoute,
   VanemateleRoute: VanemateleRoute,
+  ApiTtsRoute: ApiTtsRoute,
   LuguIdRoute: LuguIdRoute,
   MangKindRoute: MangKindRoute,
 }
