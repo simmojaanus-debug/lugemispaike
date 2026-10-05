@@ -7,7 +7,6 @@ async function handleTts({ request }: { request: Request }): Promise<Response> {
   if (!text) {
     return Response.json({ error: "missing t" }, { status: 400 });
   }
-  // Word-level / short phrase only — reject very long payloads
   if (text.length > 220) {
     return Response.json({ error: "text too long" }, { status: 400 });
   }
@@ -18,6 +17,7 @@ async function handleTts({ request }: { request: Request }): Promise<Response> {
       status: 200,
       headers: {
         "Content-Type": contentType,
+        // Cache successful real audio; vary by full query string (default)
         "Cache-Control": "public, max-age=86400, stale-while-revalidate=604800",
         "X-EKI-Voice": String(voice),
         "X-Content-Type-Options": "nosniff",

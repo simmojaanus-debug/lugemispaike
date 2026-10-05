@@ -7,7 +7,7 @@
  * Lee voices: 478 VITS (best), 458 Merlin. Docs: arhiiv.eki.ee/heli/index.php/veebiapi
  */
 
-const EKI_VOICES = [478, 458] as const;
+const EKI_VOICES = [458, 56, 478] as const;
 const SYNTHUB = "https://teenus.eki.ee/synthub/";
 
 const audioCache = new Map<string, string>(); // text -> object URL
@@ -97,7 +97,8 @@ async function playObjectUrl(objectUrl: string, text: string, rate: number): Pro
 async function blobFromResponse(res: Response): Promise<string | null> {
   if (!res.ok) return null;
   const blob = await res.blob();
-  if (blob.size < 64) return null;
+  // Reject VITS spool stubs (~1.2KB / ~50ms)
+  if (blob.size < 2500) return null;
   return URL.createObjectURL(blob);
 }
 
